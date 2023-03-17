@@ -1,0 +1,54 @@
+{
+  "personalInfo": {
+    "name": "Lola Kasimova",
+    "githubUrl": "https://github.com/19Lola89",
+    "linkedIn": "https://www.linkedin.com/feed/",
+    "email": "lolakasimova@icloud.com",
+    "cv": "cv"
+  },
+
+  "projects": [
+    {
+      "projectId": "0",
+      "title": "",
+      "projectUrl": "",
+      "repoUrl": "",
+      "projectImage": ""
+    },
+    {
+      "projectId": "1",
+      "title": "",
+      "projectUrl": "",
+      "repoUrl": "",
+      "projectImage": ""
+    },
+    {
+      "projectId": "2",
+      "title": "",
+      "projectUrl": "",
+      "repoUrl": "",
+      "projectImage": ""
+    },
+    {
+      "projectId": "3",
+      "title": "",
+      "projectUrl": "",
+      "repoUrl": "",
+      "projectImage": ""
+    },
+    {
+      "projectId": "4",
+      "title": "",
+      "projectUrl": "",
+      "repoUrl": "",
+      "projectImage": ""
+    },
+    {
+      "projectId": "",
+      "title": "",
+      "projectUrl": "",
+      "repoUrl": "",
+      "projectImage": ""
+    }
+  ]
+}
