@@ -1,8 +1,8 @@
 import React from "react";
 
-function Contact() {
-  return <div>Contact</div>;
-}
+const Contact = () => {
+  return <div>GO FUCK YOURSELF !!!! </div>;
+};
 
 export default Contact;
 
