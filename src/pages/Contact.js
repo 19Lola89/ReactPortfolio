@@ -1,7 +1,7 @@
 import React from "react";
 
 const Contact = () => {
-  return <div>GO FUCK YOURSELF !!!! </div>;
+  return <div>erm sorry </div>;
 };
 
 export default Contact;
