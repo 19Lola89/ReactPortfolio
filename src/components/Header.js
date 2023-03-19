@@ -4,12 +4,25 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 
 // Must be rendered across every page component of the site
 
 // Must contain a Navbar
 
 export class Header extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     showContactPage: false,
+  //   };
+  //   this.buttonClicked = this.buttonClicked.bind(this);
+  // }
+  // buttonClicked() {
+  //   this.setState({
+  //     showContactPage: true,
+  //   });
+  // }
   render() {
     return (
       <Navbar
@@ -18,16 +31,25 @@ export class Header extends Component {
         expand="lg"
         bg="dark"
         variant="dark"
-        style={{ borderRadius: "5px" }}
+        // style={{ borderRadius: "5px" }}
       >
         <Container>
-          <Navbar.Brand href="#home">Lola Kasimova</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/home">
+            Lola Kasimova
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
-              <Nav.Link href="#projectgallery">Project Gallery</Nav.Link>
+              <Nav.Link as={Link} to="/about">
+                About
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contact">
+                Contact
+              </Nav.Link>
+              <Nav.Link as={Link} to="/projectgallery">
+                Project Gallery
+              </Nav.Link>
+              {/* PAKEISK LINKUS APACIOJ JEI NAUDOSI */}
               <NavDropdown
                 title="Ka nors gal idek"
                 id="collasible-nav-dropdown"
@@ -49,8 +71,8 @@ export class Header extends Component {
               <img
                 src={`${process.env.PUBLIC_URL}/myavatar2.png`}
                 style={{
-                  width: "200px",
-                  height: "200px",
+                  width: "100px",
+                  height: "100px",
                   borderRadius: "20px",
                 }}
                 alt="Avatar"
