@@ -6,14 +6,13 @@
 // Some indication that this is your portfolio site
 import React from "react";
 import Hero from "../components/Hero";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 
 function Homepage() {
   return (
-    <div>
-      <Header />
+    <Layout>
       <Hero />
-    </div>
+    </Layout>
   );
 }
 

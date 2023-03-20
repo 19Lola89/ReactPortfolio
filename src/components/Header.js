@@ -6,7 +6,13 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      className="navigation"
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+    >
       <Container>
         <Navbar.Brand as={Link} to="/home">
           Lola Kasimova
@@ -24,7 +30,7 @@ function Header() {
               Projects
             </Nav.Link>
           </Nav>
-          <Nav>
+          {/* <Nav>
             <img
               src={`${process.env.PUBLIC_URL}/myavatar2.png`}
               style={{
@@ -34,7 +40,7 @@ function Header() {
               }}
               alt="Avatar"
             />
-          </Nav>
+          </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
