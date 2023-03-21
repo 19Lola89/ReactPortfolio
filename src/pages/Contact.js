@@ -1,63 +1,31 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+
+import ReqForm from "../components/ReqForm";
+import ContactSideBar from "../components/ContactSideBar";
+import ContentCard from "../components/ContentCard";
 import "../pages/Contact.css";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaCloudDownloadAlt,
-} from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div>
       <Layout>
-        <div className="contCont">
-          <div className="flex">
-            This is where I need to figure out what to put
+        <div className="contactContainer">
+          <div className="row">
+            <ContentCard
+              title="bla bla bla bla"
+              content="Lorem ipsum dolor sit amet. Aut quis fugit qui iusto dolorum sed officia animi. Eum eaque necessitatibus et provident possimus qui animi facere aut architecto nulla vel quas provident. Est enim animi eos sint consequatur qui voluptatem rerum ut deserunt sapiente qui voluptas expedita. Cum labore blanditiis ex quia labore ad tempora modi sit galisum adipisci eum atque nesciunt qui minus iste?
+
+              Eum culpa placeat qui quasi nisi sit dolores suscipit et mollitia quia in tempora voluptatem est nihil alias. Vel dolorum delectus ut incidunt perspiciatis aut alias quibusdam et laborum consequatur.
+              
+              Cum earum quasi eum modi molestiae ut possimus assumenda vel beatae similique. At odit illum est saepe tempora ea dicta voluptas sit modi suscipit. Sed galisum enim et rerum fugit qui optio repellat! Eum facere sunt eos minus molestias hic libero galisum"
+            />
           </div>
-          <div className="eventForm flex">
-            <Card style={{ width: "30rem", height: "40rem" }}>
-              {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-              <Card.Body className="cardBody">
-                <Card.Title>
-                  Get in touch by leaving your details below
-                </Card.Title>
-                <Card.Text>What's your name?</Card.Text>
-                <input className="nameSub" placeholder="Name"></input>
-                <Card.Text>Enter your email address below</Card.Text>
-                <input
-                  className="mailSub"
-                  placeholder="Enter your email here"
-                ></input>
-                <Card.Text>Thank you... add emoji</Card.Text>
-                <Button variant="dark">Submit</Button>
-              </Card.Body>
-            </Card>
+          <div className="row">
+            <ReqForm />
           </div>
-          <div className="sidebar flex">
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={40} />
-            </a>
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={40} />
-            </a>
-            <a href="mailto:youremail@example.com">
-              <FaEnvelope size={40} />
-            </a>
-            <a href="/path/to/file" download>
-              <FaCloudDownloadAlt size={40} />
-            </a>
+          <div className="row">
+            <ContactSideBar />
           </div>
         </div>
       </Layout>
