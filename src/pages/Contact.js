@@ -14,29 +14,22 @@ const Contact = () => {
         <div
           className="contactContainer"
           style={{
-            padding: "60px",
+            padding: "3em",
             display: "flex",
           }}
         >
           <div
             style={{
-              margin: "20px",
               backgroundImage: background,
               backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundAttachment: "fixed",
 
               flex: "2",
               display: "flex",
-
-              marginLeft: "400px",
             }}
-            className="centered"
           >
             <ReqForm />
           </div>
-          <div className="row">
+          <div>
             <ContactSideBar />
           </div>
         </div>

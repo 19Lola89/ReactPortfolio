@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
 import "../pages/About.css";
-// import Card from "react-bootstrap/Card";
 import ContentCard from "../components/ContentCard";
 
 const About = () => {

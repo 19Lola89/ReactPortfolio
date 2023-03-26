@@ -8,9 +8,11 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "../pages/ProjectGallery.css";
+import backgroundImage from "../assets/pencil-2.png";
 
 // i will create one instance of a card and populate it with appropriate content from my project JSON
 function ProjectGallery() {
+  const background = `url(${backgroundImage})`;
   const location = useLocation();
   const prevProjectId = location.state.projectId;
   // console.log("this is fetched", prevProjectId);
@@ -22,8 +24,16 @@ function ProjectGallery() {
   return (
     <div>
       <Layout>
-        <Row xs={1} md={2} className="projectsCards">
-          <Col key={selectedProject.id}>
+        <Row
+          className="projectsCards"
+          style={{
+            backgroundImage: background,
+            fontFamily: "Sofia, sans-serif",
+            color: "white",
+            fontSize: "30px",
+          }}
+        >
+          <Col className="mediaQ" key={selectedProject.id}>
             <div>{selectedProject.title}</div>
             <div>{selectedProject.description}</div>
             <div>
@@ -34,10 +44,14 @@ function ProjectGallery() {
                 }
                 alt={selectedProject.title}
               />
-              <Link>{selectedProject.projectUrl}</Link>
+              <Link to={selectedProject.projectUrl}>
+                {selectedProject.projectUrl}
+              </Link>
             </div>
             <div>
-              <Link>{selectedProject.repoUrl}</Link>
+              <Link to={selectedProject.repoUrl}>
+                {selectedProject.repoUrl}
+              </Link>
             </div>
 
             <Card></Card>

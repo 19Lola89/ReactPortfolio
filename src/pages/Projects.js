@@ -26,14 +26,18 @@ function Projects(props) {
   }, [selectProject]);
   return (
     <Layout>
+      <h1
+        style={{
+          fontFamily: "Sofia, sans-serif",
+          marginBottom: "0.2em",
+        }}
+      >
+        Just pick the project you would like to see{" "}
+      </h1>
       <div
         className="projectsBody text-center"
         style={{ margin: "30px", backgroundImage: background }}
       >
-        <h1 style={{ fontFamily: "Sofia, sans-serif", marginBottom: "20px" }}>
-          Just pick the project you would like to see{" "}
-        </h1>
-
         <Row
           xs={1}
           md={2}
@@ -46,14 +50,12 @@ function Projects(props) {
                 className="square-card"
                 onClick={() => moreDeets(project.id)}
               >
-                <Card.Body>
-                  <Card.Title style={{ fontSize: "30px" }}>
-                    {project.title}
-                  </Card.Title>
-                  <Card.Text style={{ fontSize: "20px" }}>
-                    {project.description}
-                  </Card.Text>
-                </Card.Body>
+                <Card.Title style={{ fontSize: "2em" }}>
+                  {project.title}
+                </Card.Title>
+                <Card.Text style={{ fontSize: "1em" }}>
+                  {project.description}
+                </Card.Text>
               </Card>
             </Col>
           ))}

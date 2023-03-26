@@ -10,7 +10,7 @@ const ContactSideBar = () => {
   return (
     <div className="sidebar">
       <a
-        href="linkedin.com/in/lola-kasimova-9533a794"
+        href="https://www.linkedin.com/in/lola-kasimova-9533a794"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -32,7 +32,10 @@ const ContactSideBar = () => {
         <FaEnvelope size={40} style={{ color: "green" }} />
       </a>
 
-      <a href="/path/to/file" download>
+      <a
+        href="https://drive.google.com/file/d/1W3JSjQuansQLBGSO3qtTQmKwTvW-adbh/view?usp=sharing"
+        download
+      >
         <FaCloudDownloadAlt size={40} style={{ color: "pink" }} />
       </a>
     </div>

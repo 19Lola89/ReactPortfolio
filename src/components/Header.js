@@ -39,17 +39,6 @@ function Header() {
               Projects
             </Nav.Link>
           </Nav>
-          {/* <Nav>
-            <img
-              src={`${process.env.PUBLIC_URL}/myavatar2.png`}
-              style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "20px",
-              }}
-              alt="Avatar"
-            />
-          </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
