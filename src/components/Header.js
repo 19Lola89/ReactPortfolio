@@ -6,20 +6,29 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <Navbar
-      className="navigation"
-      collapseOnSelect
-      expand="lg"
-      bg="dark"
-      variant="dark"
-    >
+    <Navbar className="navigation" collapseOnSelect expand="lg" variant="light">
       <Container>
-        <Navbar.Brand as={Link} to="/home">
+        <Navbar.Brand
+          style={{
+            fontFamily: "Sofia, sans-serif",
+            fontSize: "50px",
+            overflow: "visible",
+            position: "relative",
+          }}
+          as={Link}
+          to="/home"
+        >
           Lola Kasimova
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav
+            className="ms-auto "
+            style={{
+              fontFamily: "Sofia, sans-serif",
+              fontSize: "30px",
+            }}
+          >
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>

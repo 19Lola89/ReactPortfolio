@@ -1,21 +1,51 @@
-// Must be a reusable component that ingests JSON data as props and renders a single instance for each project
-//Must utilize Router props to properly render the right project based on user selection
-//Must render the following info:
-// Project title
-// Link to the deployed version
-// Link to the GitHub repository
-// GIF or screenshot of the deployed application
 // this is an actual card content
-import React from "react";
-// import projectData from "../details.json";
-// import "../pages/ProjectGallery.css";
 
-// import Card from "react-bootstrap/Card";
-// import Col from "react-bootstrap/Col";
-// import Row from "react-bootstrap/Row";
+import Layout from "../components/Layout";
+import projectData from "../details.json";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import "../pages/ProjectGallery.css";
+
 // i will create one instance of a card and populate it with appropriate content from my project JSON
 function ProjectGallery() {
-  return <div>faesgrhdtfjy</div>;
+  const location = useLocation();
+  const prevProjectId = location.state.projectId;
+  // console.log("this is fetched", prevProjectId);
+
+  const selectedProject = projectData.filter(
+    (project) => project.id === prevProjectId
+  )[0];
+
+  return (
+    <div>
+      <Layout>
+        <Row xs={1} md={2} className="projectsCards">
+          <Col key={selectedProject.id}>
+            <div>{selectedProject.title}</div>
+            <div>{selectedProject.description}</div>
+            <div>
+              <Card.Img
+                variant="top"
+                src={
+                  process.env.PUBLIC_URL + "/" + selectedProject.projectImage
+                }
+                alt={selectedProject.title}
+              />
+              <Link>{selectedProject.projectUrl}</Link>
+            </div>
+            <div>
+              <Link>{selectedProject.repoUrl}</Link>
+            </div>
+
+            <Card></Card>
+          </Col>
+        </Row>
+      </Layout>
+    </div>
+  );
 }
 
 export default ProjectGallery;

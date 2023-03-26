@@ -8,7 +8,7 @@ import {
 
 const ContactSideBar = () => {
   return (
-    <div className="sidebar flex">
+    <div className="sidebar">
       <a
         href="linkedin.com/in/lola-kasimova-9533a794"
         target="_blank"
@@ -31,6 +31,7 @@ const ContactSideBar = () => {
       <a className="envelope-logo" href="mailto:lolakasimova@icloud.com">
         <FaEnvelope size={40} style={{ color: "green" }} />
       </a>
+
       <a href="/path/to/file" download>
         <FaCloudDownloadAlt size={40} style={{ color: "pink" }} />
       </a>

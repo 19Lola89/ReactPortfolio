@@ -1,38 +1,65 @@
 // this is where json file data from porjects comes in. Reusable component// dont forget to import it
 // render six instances of projectgallery projects
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import projectData from "../details.json";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-
-// import {Link} from  "react-router-dom"
 import "../pages/Projects.css";
-// import ProjectGallery from "./ProjectGallery";
+import { useNavigate } from "react-router-dom";
+import backgroundImage from "../assets/pencil.png";
 
-function Projects() {
+function Projects(props) {
+  const background = `url(${backgroundImage})`;
+  const [selectProject, setSelectProject] = useState(null);
+  const navigate = useNavigate();
+
+  const moreDeets = (projectId) => {
+    setSelectProject(projectId);
+    console.log("Selected project ID:", projectId);
+    // navigating to the next page with clicked projectId
+    navigate("/projectgallery", { state: { projectId: projectId } });
+  };
+  useEffect(() => {
+    localStorage.setItem("selectedProject", selectProject);
+  }, [selectProject]);
   return (
-    <div className="projectsBody">
-      <Layout>
-        <h1>Just pick the project you would like to see </h1>
+    <Layout>
+      <div
+        className="projectsBody text-center"
+        style={{ margin: "30px", backgroundImage: background }}
+      >
+        <h1 style={{ fontFamily: "Sofia, sans-serif", marginBottom: "20px" }}>
+          Just pick the project you would like to see{" "}
+        </h1>
 
-        <Row xs={1} md={2} className="g-4">
+        <Row
+          xs={1}
+          md={2}
+          className="g-4"
+          style={{ fontFamily: "Sofia, sans-serif" }}
+        >
           {projectData.map((project) => (
             <Col key={project.id}>
-              <Card>
+              <Card
+                className="square-card"
+                onClick={() => moreDeets(project.id)}
+              >
                 <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Text>{project.description}</Card.Text>
-                  <Button variant="dark">Button</Button>
+                  <Card.Title style={{ fontSize: "30px" }}>
+                    {project.title}
+                  </Card.Title>
+                  <Card.Text style={{ fontSize: "20px" }}>
+                    {project.description}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

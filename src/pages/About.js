@@ -15,13 +15,21 @@ const About = () => {
 
           <div className="aboutContEl row">
             <ContentCard title="A little bit about me" />
-            <ContentCard
-              content="Lorem ipsum dolor sit amet. Aut quis fugit qui iusto dolorum sed officia animi. Eum eaque necessitatibus et provident possimus qui animi facere aut architecto nulla vel quas provident. Est enim animi eos sint consequatur qui voluptatem rerum ut deserunt sapiente qui voluptas expedita. Cum labore blanditiis ex quia labore ad tempora modi sit galisum adipisci eum atque nesciunt qui minus iste?
-
-Eum culpa placeat qui quasi nisi sit dolores suscipit et mollitia quia in tempora voluptatem est nihil alias. Vel dolorum delectus ut incidunt perspiciatis aut alias quibusdam et laborum consequatur.
-
-Cum earum quasi eum modi molestiae ut possimus assumenda vel beatae similique. At odit illum est saepe tempora ea dicta voluptas sit modi suscipit. Sed galisum enim et rerum fugit qui optio repellat! Eum facere sunt eos minus molestias hic libero galisumd"
-            />
+            <p
+              style={{ margin: "10px", fontFamily: "sofia", fontSize: "20px" }}
+            >
+              It is so nice to meet you ! I'm Lola Kasimova - an
+              empathetic,highly sensitive and fun loving human who loves
+              meaningful conversations, life changing ideas and artistic
+              expression.<br></br>
+              <br></br>Supporting others is the driving force behind the idea of
+              my dream career. I strive to broaden the integration
+              anthropological theory to tech world and make art out of it. I
+              believe it is never too late to pursue your absolute biggest
+              aspirations.<br></br>
+              <br></br>
+              Have an amazing day !
+            </p>
           </div>
         </div>
       </Layout>

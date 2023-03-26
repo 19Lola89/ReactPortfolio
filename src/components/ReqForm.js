@@ -36,9 +36,15 @@ const ReqForm = () => {
 
   return (
     <div className="eventForm flex">
-      <Card style={{ width: "30rem", height: "40rem" }}>
-        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-        <Card.Body className="cardBody">
+      <Card
+        className="reqF"
+        style={{
+          width: "30rem",
+          fontFamily: "Sofia, sans-serif",
+          padding: "60px",
+        }}
+      >
+        <Card.Body className="cardBody text-center">
           <Card.Title>Get in touch by leaving your details below</Card.Title>
           <Card.Text>What's your name?</Card.Text>
           <input ref={name} className="nameSub" placeholder="Name"></input>
@@ -48,7 +54,7 @@ const ReqForm = () => {
             className="mailSub"
             placeholder="Enter your email here"
           ></input>
-          <Card.Text>Thank you... add emoji</Card.Text>
+          <Card.Text>Thank you... 🫶</Card.Text>
           <Button onClick={handleClick} variant="dark">
             Submit
           </Button>

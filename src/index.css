@@ -1,16 +1,33 @@
 .hero {
   position: relative;
+  overflow: hidden;
 }
 .hero video {
   padding: 0;
   width: 100%;
-  height: 50%; /* Set the width of the video element to 50% of its container */ /* Maintain the video's aspect ratio */
+  height: 50%;
   border: rgba(0, 0, 0, 0.7) bold;
 }
 
 .navbar {
-  box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
 }
+
+.navbar ::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #ddd;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-nav > li > a:hover::after {
+  background-color: #333;
+}
+
 .content {
   position: absolute;
   width: 100%;
@@ -21,10 +38,16 @@
   justify-content: center;
   align-items: center;
   color: white;
+  font-family: sans-serif, sofia;
 }
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.me-auto {
+  display: flex;
+  justify-content: center;
 }
