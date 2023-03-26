@@ -19,5 +19,9 @@ MIT
 
 ## Deployment link and screenshot
 
+https://github.com/19Lola89/ReactPortfolio/blob/main/README.md
 
 
+
+<img width="704" alt="codes" src="https://user-images.githubusercontent.com/86410482/227786338-7d730545-3be3-4e9e-a73c-5b82c53720f7.png">
+<img width="1384" alt="code" src="https://user-images.githubusercontent.com/86410482/227786346-61b3edee-2707-4e6b-a349-640794f68d4f.png">
