@@ -1,6 +1,6 @@
 # React Portfolio 
 
-This project was designed using node.js, react an other npm tools such as bootstrap. The aim of the project was to create fully functional react app and to efficiently demonstrate data on a webpage. 
+This project was designed using node.js, react and other npm tools such as bootstrap. The aim of the project was to create fully functional react app and to efficiently demonstrate data on a webpage. 
 ## Installation 
 
 N/A
